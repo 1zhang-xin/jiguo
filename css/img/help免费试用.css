@@ -1,0 +1,81 @@
+.headtitle {
+  width: 100%;
+  height: 150px;
+  position: relative;
+}
+.headtitle p {
+  text-align: center;
+  font-size: 50px;
+  height: 100px;
+  line-height: 100px;
+}
+.headtitle ul {
+  width: 350px;
+  height: 30px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  list-style: none;
+}
+.headtitle ul li {
+  float: left;
+  margin: 0 50px;
+}
+.headtitle ul li a {
+  text-decoration: none;
+  border-bottom: 3px solid white;
+}
+.headtitle ul li a:hover {
+  color: coral;
+  border-bottom: 3px solid coral;
+}
+.nav {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+}
+.nav ul {
+  list-style: none;
+  width: 600px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+.nav ul li {
+  text-align: center;
+  float: left;
+  margin: 0 50px;
+}
+.nav ul li a {
+  text-decoration: none;
+}
+.main {
+  width: 100%;
+}
+.main ul {
+  list-style: none;
+  width: 1000px;
+  position: relative;
+}
+.main ul li {
+  width: 200px;
+  height: 250px;
+  background-color: aqua;
+  border-radius: 10px;
+  margin: 10px 20px;
+  float: left;
+  text-align: center;
+}
+.main ul li p {
+  margin: 0 auto;
+}
+.main ul li .sp_l {
+  border: 2px;
+}
+.main ul li .sp_r {
+  float: left;
+}
