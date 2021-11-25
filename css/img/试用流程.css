@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.shiyong{
+    width: 100%;
+    height: 1035px;
+    
+}
+.shiyongone{
+margin-left: 0px;
+margin-top: 50px;
+    width: 308px;
+    height: 365px;
+    background-color: rgb(243,243,243);
+    display: inline-block;
+}
+.p1{
+    margin-left: 50px;
+  padding-top: 44px;
+    font-size: 24px;
+    font-weight: 700;
+}
+.p2{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 54px;
+    padding-top: 30px;
+}
+.p3{
+    font-size: 16px;
+    margin-left: 74px;
+    padding-top: 8px;
+}
+.shiyongtwo{
+    width: 721px;
+    height: 935px;
+    background-color: rgb(243,243,243);
+    float: right;
+    left: -67px;
+    top: 49px;
+}

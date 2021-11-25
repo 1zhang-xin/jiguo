@@ -5,8 +5,9 @@
 div{
     margin: 0px auto;
     width: 1200px;
-    /* height: 1800px; */
+ 
     border: solid 1px red;
+   
    position: relative;
 }
 header{
