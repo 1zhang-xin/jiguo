@@ -6,8 +6,7 @@
 div{
     margin: 0px auto;
     width: 1200px;
-    height: 1800px;
-    border: solid 1px red;
+   
    position: relative;
 }
 header{
@@ -74,7 +73,6 @@ footer{
     height: 400px;
     background-color: rgb(80,80,80);
   position: absolute;
-  top: 1400px;
   position: relative;
    
    
