@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+div{
+    margin: 0px auto;
+    width: 1200px;
+    height: 1800px;
+    border: solid 1px red;
+   position: relative;
+}
+header{
+    width: 100%;
+    height: 105px;
+   
+  
+    border-bottom: 1px solid #ccc;
+}
+.daohanglan>li{
+    font-size: 23px;
+  
+   list-style: none;
+   display: inline-block;
+   height: 105px;
+  line-height: 195px;
+  padding-left: 19px;
+  
+  
+  
+ 
+}
+.daohanglan>li>a:hover{
+    color: red;
+}
+.daohanglan>li>.zhuce:hover{
+    background-color: red;
+    color: white;
+}
+.sousuo>a>img{
+    opacity: 0.9;
+    background: url(../../css/img/search.png) no-repeat 0px 0px;
+}
+.sousuo>a>img:hover{
+    background-size: 28px 30px ;
+}
+.daohanglan>li>a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: -30px;
+}
+.daohanglan>li>.zhuce{
+    color: red;
+    border: 1px solid red;
+    font-size: 20px;
+    
+    
+}
+.shouye{
+    margin-left: 25px;
+    padding-right: 12px;
+   
+
+}
+.sousuo{
+    margin-left: 340px;
+    position: relative;
+    top: 5px;
+    
+}
+footer{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(80,80,80);
+  position: absolute;
+  top: 1400px;
+  position: relative;
+   
+   
+}
+.erweima{
+    width: 120px;
+    height: 120px;
+    background: url(../../img/myCode.jpg) no-repeat 0px 0px;
+    list-style: none;
+    position: relative;
+    left: 75px;
+    top: 38px;
+}
+.dibuone{
+    list-style: none;
+    font-size: 13px;
+    color: rgb(163,163,163);
+    position: relative;
+    left: 224px;
+    top: -84px;
+}
+.logolmg{
+    width: 121px;
+    height: 46px;
+    background: url(../../img/logoImg.jpg) no-repeat 0px 0px;
+}
+.dibutwo{
+    list-style: none;
+    position: relative;
+    left: 388px;
+    top: -193px;
+}
+.dibutwo>.mianfei{
+    color: white;
+}
+.dibutwo>li>a{
+    text-decoration: none;
+    font-size: 13px;
+    color: rgb(163,163,163);
+}
+.dibuthree{
+    list-style: none;
+    position: absolute;
+    left: 522px;
+    top: 41px;
+}
+.dibuthree>.youqing{
+    color: white;
+}
+.dibuthree>li>a{
+    text-decoration: none;
+    font-size: 13px;
+    color: rgb(163,163,163);
+}
+.dibufour{
+    list-style: none;
+    position: absolute;
+    left: 708px;
+    top: 41px;
+}
+.dibufour>.goumai{
+    color: white;
+}
+.dibufour>li>a{
+    text-decoration: none;
+    font-size: 13px;
+    color: rgb(163,163,163);
+}
+.dibufive{
+    list-style: none;
+    position: absolute;
+    left: 914px;
+    top: 41px;
+}
+.dibufive>.changshang{
+    color: white;
+}
+.dibufive>li>a{
+    text-decoration: none;
+    font-size: 13px;
+    color: rgb(163,163,163);
+}
