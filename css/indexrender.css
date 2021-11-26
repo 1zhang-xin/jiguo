@@ -1,0 +1,23 @@
+.sec1 {
+  width: 100%;
+}
+.sec1 .main {
+  width: 1000px;
+  height: 600px;
+  text-align: center;
+}
+.sec1 .main .sec1_top {
+  width: 100%;
+  height: 40px;
+}
+.sec1 .main .list {
+  list-style: none;
+  margin: 0 auto;
+}
+.sec1 .main .list li {
+  width: 200px;
+  height: 240px;
+  border-radius: 10px;
+  background-color: aqua;
+  float: left;
+}
