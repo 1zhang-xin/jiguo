@@ -1,11 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-    
 }
 div{
     margin: 0px auto;
     width: 1200px;
+   
+ 
+    border: solid 1px red;
    
    position: relative;
 }
@@ -73,6 +75,8 @@ footer{
     height: 400px;
     background-color: rgb(80,80,80);
   position: absolute;
+
+  /* top: 1400px; */
   position: relative;
    
    

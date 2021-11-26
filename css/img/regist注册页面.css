@@ -1,0 +1,39 @@
+.reg {
+  width: 1000px;
+  height: 600px;
+  background-color: #f7f7f7;
+  margin: 0 auto;
+  position: relative;
+}
+.reg .login_ {
+  width: 600px;
+  background-color: white;
+  padding: 20px 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.reg .login_ input {
+  width: 250px;
+  height: 40px;
+  background-color: #f7f7f7;
+  line-height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  margin: 15px 10px 15px 150px;
+}
+.reg .login_ .check_1 {
+  width: 180px;
+  height: 30px;
+}
+.reg .login_ .check_2 {
+  width: 180px;
+}
+.reg .login_ .span_1 {
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
