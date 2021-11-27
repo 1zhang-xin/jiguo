@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.head{
+    width: 100%;
+    height: 300px;
+    /* background-color: pink; */
+    border: none;
+    background: url(../img/original.jpg) no-repeat -350px 0px;
+}
+.head>.txt{
+    width: 400px;
+    height: 250px;
+    /* background-color: #80C269; */
+    margin-left: 700px;
+    border: none;
+    padding-top: 20px;
+    animation: text 2s linear forwards;
+}
+.head>.txt>ul{
+    width: 400px;
+    height: 250px;
+    list-style: none;
+    /* background-color: plum; */
+    display: inline-block;
+    /* margin: 0px auto; */
+}
+.head>.txt>ul>.H1{
+    color: white;
+    font-size: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+.head>.txt>ul>.H2{
+    width: 100px;
+    height: 32px;
+    color: white;
+    font-size: 18px;
+    margin-top: 30px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 10px;
+    line-height: 32px;
+    background-color: rgba(255,255,255,.3);
+}
+.head>.txt>ul>.H2-1{
+    margin-left: 30px;
+    width: 100px;
+    height: 32px;
+    color: white;
+    font-size: 18px;
+    margin-top: 30px;
+    text-align: center;
+    display: inline-block;
+    line-height: 32px;
+    background-color: rgba(255,255,255,.3);
+}
+.head>.txt>ul>.H3{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+}
+.head>.txt>ul>.H4{
+    width: 200px;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    background-color: #FE5341;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 100px;
+    line-height: 40px;
+}
+.head>.txt>ul>.H4>p>a{
+    text-decoration: none;
+    color: white;
+}
+@keyframes text{
+    0%{
+        transform: translate(400px,65px);
+
+    }
+    50%{
+        transform: translate(200px,50px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+

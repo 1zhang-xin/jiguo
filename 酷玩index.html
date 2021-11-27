@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>酷玩</title>
-    <link rel="stylesheet" href="./css/img/index首页.css">
+    <link rel="stylesheet" href="./css/img/index.css">
     <link rel="stylesheet" href="./css/酷玩品类.css">
     <link rel="stylesheet" href="./css/img/kuwanindex.css">
 </head>
@@ -17,8 +17,8 @@
                
                 <li class="shouye"><a href="index.html">首页</a></li>
                 <li><a href="#">酷玩</a></li>
-                <li><a href="">导购</a></li>
-                <li><a href="./help免费试用.html">试用</a></li>
+                <li><a href="./导购1.html">导购</a></li>
+                <li><a href="./试用-大众试用-全部.html">试用</a></li>
                 <li><a href="./报告模块.html">报告</a></li>
                 <li class="sousuo">
                     <a href="#">
@@ -27,7 +27,33 @@
                     </li>
                     <li><a href="./regist注册页面.html" class="zhuce">注册</a></li>
                 <li><a href="#" id="jsone" onclick="fn()">登录</a></li>           
-            </ul>   
+            </ul>  
+            
+            <div id="denglujs">
+                <div class="one">
+                          <div class="two">
+                              <p class="jiguoone">极果账号登录</p>
+                             
+                        <input type="text" class="jiguotwo" placeholder="手机号"><br>
+                    <input type="password" class="jiguotwo" placeholder="密码"><br>
+                    <p class="jiguo_"><input type="checkbox" class="jiguofour" >下次自动登录
+                    <button class="juguothree">登录</button></p>
+                    <p  class="jiguofive"> <span>注册新账号</span> 
+                       <span class="spantwo">忘记密码?</span></p>
+                   
+
+                             
+                          </div>
+                          <div class="three">
+                              <p class="shejiao">社交网络账号登录</p>
+                              <p class="shejiaoone"><img src="./img/微信.png" alt=""></p>
+                              <span><img src="./img/取消.png" alt="" id="quxiao" onclick="ft()"></span>
+                              <ul >
+                                  <li class="weibo"><img src="./img/微博.png" alt="">微博</li>
+                                  <li class="shouji"><img src="./img/QQ.png" alt="">QQ</li>
+                              </ul>
+                          </div>
+                </div>
         </header>
         <div class="headtitle">
             <p>发现酷玩</p>
@@ -177,3 +203,15 @@
         </li>
     {{~}}
 </script>
+<script>
+    
+    var aaa= document.getElementById('denglujs');
+    console.log(aaa);
+    function ft(){
+        aaa.style.display='none';
+       //  aaa.style.zIndex='-1'
+    }
+    function fn(){
+      aaa.style.display='block';
+    }
+   </script>
