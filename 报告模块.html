@@ -146,7 +146,7 @@
 <script>
     function baogaozuixin(){
         var ajax_ = new XMLHttpRequest()||new ActiveXObject("microsoft.XMLHTTP");
-        ajax_.open('get','./json/报告-最新.json',true);
+        ajax_.open('get','./jsonone/报告-最新.json',true);
         ajax_.send();
         ajax_.onreadystatechange = function(){
             if(ajax_.readyState==4){
@@ -161,7 +161,7 @@
     baogaozuixin();
     function baogaozuire(){
         var ajax_ = new XMLHttpRequest()||new ActiveXObject("microsoft.XMLHTTP");
-        ajax_.open('get','./json/报告-最热.json',true);
+        ajax_.open('get','./jsonone/报告-最热.json',true);
         ajax_.send();
         ajax_.onreadystatechange = function(){
             if(ajax_.readyState==4){
@@ -174,7 +174,7 @@
         }  
     }
 </script>
-<script src="./json/doT.min.js"></script>
+<script src="./jsonone/doT.min.js"></script>
 <script id="moban" type="text/x-dot-template">
     <!-- 6、展示数据 -->
     {{~it:value:baogao}}
