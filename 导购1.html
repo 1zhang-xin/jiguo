@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./daoguozuire.css">
-    <link rel="stylesheet" href="../css/img/index.css">
+    <title>导购</title>
+    <link rel="stylesheet" href="../jiguo/css/img/index.css">
+    <link rel="stylesheet" href="./css/导购.css">
+
 </head>
 <body>
     <div>
@@ -65,18 +66,52 @@
                      <span class="zuire">最热</span>
             </div>
 
-           
+
+
 
             <div class="xuanran">
-
-
-                <ul class="xrone">
+                <ul class="uls">
                     <li>
-                        <img src="../img/g1.jpg" alt="">
-                        <p>花万元把蜗居秒变“豪宅”?这12件家具就能帮你办到</p>
+                        <a href="#">
+                            <img src = "img/g1.jpg">
+                            <p>111111</p>
+                            <p>
+                                <span class="zan">3</span>
+                                <span class="look">3</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src = "img/g2.jpg">
+                            <p>111111</p>
+                            <p>
+                                <span class="zan">3</span>
+                                <span class="look">3</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src = "img/g3.jpg">
+                            <p>111111</p>
+                            <p>
+                                <span class="zan">3</span>
+                                <span class="look">3</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src = "img/g4.jpg">
+                            <p>111111</p>
+                            <p>
+                                <span class="zan">3</span>
+                                <span class="look">3</span>
+                            </p>
+                        </a>
                     </li>
                 </ul>
- 
             </div>
         <footer>
           
@@ -148,35 +183,6 @@
         </footer>
     </div>
 </body>
-<script src="../json/doT.min.js"></script>
-<!-- <script src="./jquery.min.js"></script> -->
-<script>
-    var ajax = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
-    ajax.open('get', '../json/导购-最热.json', true);
-    ajax.send();
-    ajax.onreadystatechange = function () {
-        if (ajax.readyState == 4) {
-            if (ajax.status == 200) {
-                var data = JSON.parse(ajax.responseText);
-                var tempText = doT.template(document.getElementById('temp_id').innerHTML);
-                                                // 
-                document.getElementsByClassName('xrone')[0].innerHTML = tempText(data);;
-                // document.getElementsByClassName('box')[0].innerHTML = data;
-            }
-        }
-    }
-</script>
- <!-- css的样式名称 -->
-<script id="temp_id" type="text/x-dot-template">
-    
-    {{~it:value:daoguozuire}}
-   
-    <li>
-        <img src="{{=value.img}}" alt="">
-        <p>{{=value.text}}</p>
-    </li>
-    {{~}}
-</script>
 </html>
 <script>
     
@@ -190,3 +196,37 @@
       aaa.style.display='block';
     }
    </script>
+
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+<script>
+      function hotnew_(){
+          var box =document.getElementsByClassName("uls")[0];
+          axios({
+              method:"get",
+              url:"http://192.168.31.5:3000/play/new",
+             }).then(response=>{
+                 var str="";
+                 for(let k = 1;k<3;k++){
+                     for(let i =0; i<response.data[k].length; i++){
+                         str +=  `
+                         <li>
+                            <a>
+                                <img src = "${response.data[k][i].img}">
+                                <p>${response.data[k][i].text}</p>
+                            </a>
+                            <p>
+                                <span class = "zan">3</span>
+                                <span class = "look">3</span>
+                            </p>
+                        </li>
+                        `
+
+                     }
+                 }
+                 box.innerHTML = str;
+             })
+      }
+      hotnew_();
+</script>

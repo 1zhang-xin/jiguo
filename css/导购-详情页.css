@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    width: 100%;
+    height: 4900px;
+    background-color: rgb(247,247,247);
+    border: none;
+    position: relative;
+}
+.m1{
+    color: rgb(119, 118, 118);
+    font-size: 14px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.m1>a{
+    font-size: 14px;
+    color: rgb(119, 118, 118);
+    text-decoration: none;
+}
+.min{
+    width: 60%;
+    height: 4800px;
+    background-color: white;
+    margin-left: 100px;
+    border: none;
+}
+.min>.m2{
+    display: inline-block;
+    font-size: 14px;
+    color: rgb(119, 118, 118);
+    padding-left: 30px;
+    line-height: 30px;
+}
+.min>.m2>img{
+    width: 20px;
+}
+.min>img{
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+.min>.m3{
+    display: inline-block;
+    font-size: 14px;
+    color: rgb(119, 118, 118);
+    margin-left: 600px;
+}
+.min>.m4{
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.min>.m5{
+    margin: 20px;
+    text-align: center;
+}
+.min>.m6{
+    font-size: 14px;
+    color: rgb(119, 118, 118);
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.min>.m7{
+    font-size: 14px;
+    color: rgb(119, 118, 118);
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.like{
+    width: 310px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    top:45px;
+    right: 65px;
+    list-style: none;
+    border: 1px solid rgb(119, 118, 118);
+    border-radius: 5px;
+}
+.like>li{
+    display: inline-block;
+    width: 150px;
+    line-height: 150px;
+    /* padding-top: 20px; */
+    text-align: center;
+    background-color: plum;
+}
+.like>.L1{
+    background: url(./img/xinRedo.png) no-repeat 63px 25px;
+    border-right: 1px solid rgb(119, 118, 118);
+}
+.like>.L2{
+    background: url(./img/share_yj1.png) no-repeat 63px 25px;
+}
