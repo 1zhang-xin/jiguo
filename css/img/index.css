@@ -9,7 +9,7 @@ div{
     position: relative;
    
  
-    border: solid 1px red;
+    border: solid 1px white;
    
    position: relative;
 }
@@ -285,4 +285,136 @@ position: relative;
     left: 156px;
     height: 32px;
     line-height: 32px;
+    
+}
+.lunboone{
+    width: 100%;
+    height: 300px;
+    border: solid 1px white;
+    overflow: hidden;
+}
+
+.swiper-slide>li{
+    height: 289px;
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+    margin-left: 32px;
+    Vertical-align:top;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+   
+}
+.swiper-slide>li>p{
+    margin-top: 10px;
+}
+.swiper-slide>li>img{
+    width: 254px; 
+}
+.swiper-slide>li>span{
+    border: 1px solid red;
+    border-radius: 8px;
+   
+}
+
+
+.baogaojingxuan{
+    width: 100%;height: 1149px;
+    /* border: 1px solid #ccc; */
+}
+.baogaojingxuanone{
+    width: 100%;height: 987px;
+    /* border: 1px solid #ccc; */
+}
+.biaoti{
+    width: 100%;
+    height: 30px;
+ 
+}
+.sone-{
+    float: left;
+    font-size: 18px;
+}
+.sone-2{
+    float: right;
+    font-size: 18px;
+    color: orangered;
+}
+
+
+
+
+
+.xuanran{
+    width: 100%;
+    height: 1123px;
+    /* background-color: #ccc; */
+}
+
+.xrone{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.xrone>li{
+    list-style: none;
+    width: 288px;
+    height: 260px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: white;
+    display: inline-block;
+    /* 行内块元素 */
+}
+.xrone>li>img{
+    width: 290px;
+    height: 168px;
+}
+
+
+.xuantwo{
+    width: 100%;
+    height: 1123px;
+    background-color: #ccc;
+}
+.xrtwo{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.xrtwo>li{
+    list-style: none;
+    width: 269px;
+    height: 221px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: white;
+    display: inline-block;
+}
+.xrtwo>li>p{
+    font-size: 14px;
+    /* text-align: center; */
+}
+.xrtwo>li>img{
+    width: 268px;
+    height: 140px;
+}
+.sp_one{
+    color: orange;
+}
+.sp_two{
+    position: relative;
+    left: 155px;
+    top: 8px;
 }
