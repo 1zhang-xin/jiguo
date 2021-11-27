@@ -25,16 +25,18 @@
   width: 100px;
   height: 30px;
   float: left;
+  border-bottom: 3px solid white;
   text-align: center;
   margin: 0 25px;
 }
+.headtitle ul li:hover {
+  border-bottom: 10px solid coral;
+}
 .headtitle ul li a {
   text-decoration: none;
-  border-bottom: 3px solid white;
 }
 .headtitle ul li a:hover {
   color: coral;
-  border-bottom: 3px solid coral;
 }
 .main {
   width: 1200px;

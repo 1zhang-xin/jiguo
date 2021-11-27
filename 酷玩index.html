@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index首页</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./css/img/index首页.css">
-    <link rel="stylesheet" href="./css/indexrender.css">
+    <link rel="stylesheet" href="./css/酷玩品类.css">
+    <link rel="stylesheet" href="./css/img/kuwanindex.css">
 </head>
 <body>
     <div>
@@ -14,8 +15,8 @@
             <ul class="daohanglan">
                 <li><img src="./img/logonew.png" alt=""></li>
                
-                <li class="shouye"><a href="#">首页</a></li>
-                <li><a href="./酷玩index.html">酷玩</a></li>
+                <li class="shouye"><a href="index.html">首页</a></li>
+                <li><a href="#">酷玩</a></li>
                 <li><a href="">导购</a></li>
                 <li><a href="./help免费试用.html">试用</a></li>
                 <li><a href="./报告模块.html">报告</a></li>
@@ -25,11 +26,36 @@
                     </a>
                     </li>
                     <li><a href="./regist注册页面.html" class="zhuce">注册</a></li>
-                <li><a href="#" id="jsone" onclick="fn()">登录</a></li>
-              
-               
-            </ul>
+                <li><a href="#" id="jsone" onclick="fn()">登录</a></li>           
+            </ul>   
         </header>
+        <div class="headtitle">
+            <p>发现酷玩</p>
+            <ul>
+                <li onclick="showData()"><a href="#" >最新</a></li>
+                <li onclick="zuire()"><a href="#" >最热</a></li>
+                <li ><a href="./酷玩模块品类.html">品类</a></li>
+            </ul>
+        </div>
+        <div class="pagerender">
+            <ul class="list">
+                <li>
+                    <a href="#">
+                        <img src="#" alt="">
+                        <h4>123咸鱼</h4>
+                        <p>这是一条有梦想的咸鱼</p>
+                        <div class="zan">
+                            <span class="sp_price">345</span>
+                            <div class="zan_right">
+                                <span class="sp_xin">123</span>
+                                <span class="sp_look">132</span>
+                            </div>
+                        </div>
+                        
+                    </a>
+                </li>
+            </ul>
+        </div>
         <footer>
           
             <ul class="erweimaone">
@@ -102,14 +128,54 @@
 </body>
 </html>
 <script>
-    
- var aaa= document.getElementById('denglujs');
- console.log(aaa);
- function ft(){
-     aaa.style.display='none';
-    //  aaa.style.zIndex='-1'
- }
- function fn(){
-   aaa.style.display='block';
- }
+    function showData(){
+        var ajax_ = new XMLHttpRequest()||new ActiveXObject("microsoft.XMLHTTP");
+        ajax_.open('get','./json/酷玩-最新.json',true);
+        ajax_.send();
+        ajax_.onreadystatechange = function(){
+            if(ajax_.readyState==4){
+                if(ajax_.status ==200){
+                    var data = JSON.parse(ajax_.responseText);
+                    var tmpText = doT.template(document.getElementById('moban').innerHTML);
+                    document.getElementsByClassName('list')[0].innerHTML =  tmpText(data);
+                }
+            }
+        }
+    }
+    showData();
+    function zuire(){
+        var ajax_ = new XMLHttpRequest()||new ActiveXObject("microsoft.XMLHTTP");
+        ajax_.open('get','./json/酷玩-最热.json',true);
+        ajax_.send();
+        ajax_.onreadystatechange = function(){
+            if(ajax_.readyState==4){
+                if(ajax_.status ==200){
+                    var data = JSON.parse(ajax_.responseText);
+                    var tmpText = doT.template(document.getElementById('moban').innerHTML);
+                    document.getElementsByClassName('list')[0].innerHTML =  tmpText(data);
+                }
+            }
+        }  
+    }
+</script>
+<script src="./json/doT.min.js"></script>
+<!-- 4.准备模板 -->
+<script id="moban" type="text/x-dot-template">
+    <!-- 6、展示数据 -->
+    {{~it:value:kuwanindex}}
+        <li>
+            <a href="#">
+                 <img src="{{=value.img}}" alt="">
+                 <h4>{{=value.text}}</h4>
+               <p>{{=value.description}}</p>
+               <div class="zan">
+                   <span class="sp_price">{{=value.price}}</span>
+                   <div class="zan_right">
+                    <span class="sp_xin">{{=value.like}}</span>
+                    <span class="sp_look">{{=value.words}}</span>
+                   </div>
+               </div>
+            </a>           
+        </li>
+    {{~}}
 </script>

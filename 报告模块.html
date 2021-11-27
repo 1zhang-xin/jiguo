@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index首页</title>
+    <title>报告</title>
     <link rel="stylesheet" href="./css/img/index首页.css">
-    <link rel="stylesheet" href="./css/indexrender.css">
+    <link rel="stylesheet" href="./css/img/baogao.css">
 </head>
 <body>
     <div>
@@ -14,11 +14,11 @@
             <ul class="daohanglan">
                 <li><img src="./img/logonew.png" alt=""></li>
                
-                <li class="shouye"><a href="#">首页</a></li>
+                <li class="shouye"><a href="./index.html">首页</a></li>
                 <li><a href="./酷玩index.html">酷玩</a></li>
                 <li><a href="">导购</a></li>
                 <li><a href="./help免费试用.html">试用</a></li>
-                <li><a href="./报告模块.html">报告</a></li>
+                <li><a href="">报告</a></li>
                 <li class="sousuo">
                     <a href="#">
                         <img src="./css/img/search.png" alt="">
@@ -30,6 +30,48 @@
                
             </ul>
         </header>
+        <div class="headtitle">
+            <p>体验报告</p>
+            <ul>
+                <li onclick="baogaozuixin()"><a href="#">最新</a></li>
+                <li onclick="baogaozuire()"><a href="#">最热</a></li>
+            </ul>
+        </div>
+        <div class="see1">
+            <div class="see_left">
+                <ul class="baogaoul">
+                    <li>
+                        <!-- <a href="">
+                           <img src="" alt="">
+                            <p>这我不服腻我去大V腰骶部佛挂机了</p>
+                            <div class="see_bottom">
+                                <span class="ess_b">324</span>
+                                     <span class="ess_l">111</span>
+                                <span class="ess_r">222</span>                 
+                            </div>  
+                        </a> -->
+                       
+                    </li>
+                </ul>
+            </div>
+            <div class="see_right">
+                <div class="tiyan">
+                极果体验师
+                </div>
+                <img src="./img/tiyanImg.jpg" alt="">
+                <h2>福利</h2>
+                <p>第一时间体验新品，大众试用优先通过,还有定向邀请试用。新品玩到手软!</p>
+                <h2>要求</h2>
+                <p>是某个领域的大神级玩家，在社交网络或圈子里有大影响力，善写作会拍摄。               </p>
+                <h2>申请</h2>
+                <p>1.关注极果公众号: jguojguo <br>(或扫描下方二维码)</p>
+                <p>在公众号内回复:体验师</p>
+                <div class="tiyan">
+                    关注我们
+                </div>
+                <img src="./img/myCode.jpg" alt="">
+            </div>
+        </div>
         <footer>
           
             <ul class="erweimaone">
@@ -102,14 +144,50 @@
 </body>
 </html>
 <script>
-    
- var aaa= document.getElementById('denglujs');
- console.log(aaa);
- function ft(){
-     aaa.style.display='none';
-    //  aaa.style.zIndex='-1'
- }
- function fn(){
-   aaa.style.display='block';
- }
+    function baogaozuixin(){
+        var ajax_ = new XMLHttpRequest()||new ActiveXObject("microsoft.XMLHTTP");
+        ajax_.open('get','./json/报告-最新.json',true);
+        ajax_.send();
+        ajax_.onreadystatechange = function(){
+            if(ajax_.readyState==4){
+                if(ajax_.status ==200){
+                    var data = JSON.parse(ajax_.responseText);
+                    var tmpText = doT.template(document.getElementById('moban').innerHTML);
+                    document.getElementsByClassName('baogaoul')[0].innerHTML =  tmpText(data);
+                }
+            }
+        }
+    }
+    baogaozuixin();
+    function baogaozuire(){
+        var ajax_ = new XMLHttpRequest()||new ActiveXObject("microsoft.XMLHTTP");
+        ajax_.open('get','./json/报告-最热.json',true);
+        ajax_.send();
+        ajax_.onreadystatechange = function(){
+            if(ajax_.readyState==4){
+                if(ajax_.status ==200){
+                    var data = JSON.parse(ajax_.responseText);
+                    var tmpText = doT.template(document.getElementById('moban').innerHTML);
+                    document.getElementsByClassName('baogaoul')[0].innerHTML =  tmpText(data);
+                }
+            }
+        }  
+    }
+</script>
+<script src="./json/doT.min.js"></script>
+<script id="moban" type="text/x-dot-template">
+    <!-- 6、展示数据 -->
+    {{~it:value:baogao}}
+        <li>
+            <a href="#">
+                 <img src="{{=value.img}}" alt="">
+               <p>{{=value.text}}</p>
+               <div class="see_bottom">
+                   <span class="ess_b">{{=value.endTime}}</span>
+                    <span class="ess_l">{{=value.num}}</span>
+                    <span class="ess_r">{{=value.apply}}</span>
+               </div>
+            </a>           
+        </li>
+    {{~}}
 </script>
